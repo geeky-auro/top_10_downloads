@@ -38,7 +38,7 @@ class ParseApplication {
                 XmlPullParser.TEXT->{textValue=xpp.text}
 
                 XmlPullParser.END_TAG->{
-                    Log.d(Tag,"Parse : Ending Tag for "+tagname)
+                //    Log.d(Tag,"Parse : Ending Tag for "+tagname)
                     if (inEntry)
                     {
                         when(tagname)
@@ -58,13 +58,15 @@ class ParseApplication {
                 }
                 }
                 //Nothing Else to do...
-                evnttype=xpp.next() //TODO:Test out nextTag...to
+                evnttype=xpp.next()
             }
-            for (i in applications)
-            {
-                Log.d(Tag,"******************")
-                Log.d(Tag,i.toString())
-            }
+
+            //To display items in logcat...
+//            for (i in applications)
+//            {
+//                Log.d(Tag,"******************")
+//                Log.d(Tag,i.toString())
+//            }
 
         }
         catch(e:Exception){
